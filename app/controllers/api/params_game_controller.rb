@@ -27,4 +27,17 @@ def guess
   render 'guess.json.jb'
 end
 
+def segment
+  @number = params[:number].to_i
+  answer = 36
+  if @number > answer
+    @message = "too high"
+  elsif @number < answer
+    @message = "too low"
+  else
+    @message = "you win!"
+  end
+  render 'guesser.json.jb'
+end
+
 end
