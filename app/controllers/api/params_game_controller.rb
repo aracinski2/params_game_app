@@ -15,4 +15,16 @@ def name_message
   render 'a_name.json.jb'
 end
 
+def guess
+  @number = params["number"].to_i
+  if @number > 36
+    @message = "too high"
+  elsif @number < 36
+    @message = "too low"
+  elsif @number == 36
+    @message = "you win!"
+  end
+  render 'guess.json.jb'
+end
+
 end

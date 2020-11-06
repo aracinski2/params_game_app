@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     get "/name" => "params_game#name_upcase"
-    get "name_a" => "params_game#name_message"
+    get "/name_a" => "params_game#name_message"
+    get "/guess_number" => "params_game#guess"
   end
 end
